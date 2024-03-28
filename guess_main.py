@@ -14,7 +14,6 @@ def main():
 
         #Call the OOP from the other program 
         sequence, steps = CollatzCalculator.calculate_sequence(num)
-        print(sequence)
         #print(f"Steps: {steps}")
 
         play_guessing_game(num, steps)
@@ -27,8 +26,10 @@ def play_guessing_game(num, actual_steps):
     guess = int(input("\nGuess the number of steps to reach 1: "))
     if guess == actual_steps:
         print("Congratulations! You guessed it right.")
+        print(sequence)
     else:
         print(f"Sorry, that's incorrect. The actual number of steps was {actual_steps}.")
+        print(sequence)
         
 
 #Run the program 
